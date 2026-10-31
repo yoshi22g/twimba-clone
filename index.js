@@ -138,17 +138,17 @@ function getFeedHtml(){
             </div>
             <div class="hidden" id="replies-${tweet.uuid}">
                 ${repliesHtml}
-                
-            </div>
-            <div class="reply-bar" id="reply-bar-to-${tweet.uuid}">
-                <p>Write you reply</p>
+                <div class="tweet-reply reply-bar" id="reply-bar-to-${tweet.uuid}">
+                    <img src="images/scrimbalogo.png" class="profile-pic profile-pic-small">
+                    <p>Write your reply</p>
+                </div>
             </div>   
         </div>
         `
    })
    return feedHtml 
 }
-
+//id="reply-bar-to-${tweet.uuid}"
 function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
 }

@@ -103,7 +103,7 @@ button{
     gap: 4px;
 }
 
-.tweet-reply{
+.tweet-reply {
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0px;
     margin: 10px 0 10px 40px;
@@ -126,7 +126,14 @@ button{
 .reply-bar {
     height: 60px;
     display: flex;
-    
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color:#555;
+    background-color: #fafafa;
+    padding-top: 0;
+    padding-left:20px;
+
 }
 
 /* images */
@@ -139,6 +146,7 @@ button{
 
 .profile-pic-small {
     width: 32px;
+    height: 32px;
 }
 
 /* utility */
