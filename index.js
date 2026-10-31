@@ -138,10 +138,7 @@ function getFeedHtml(){
             </div>
             <div class="hidden" id="replies-${tweet.uuid}">
                 ${repliesHtml}
-                <div class="reply-bar">
-                    <img src="images/scrimbalogo.png" class="profile-pic-small">
-                    <p class="reply-placeholder">Write your reply</p>
-                <div> 
+                
             </div>   
         </div>
         `
