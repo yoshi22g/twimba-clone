@@ -139,6 +139,9 @@ function getFeedHtml(){
             <div class="hidden" id="replies-${tweet.uuid}">
                 ${repliesHtml}
                 
+            </div>
+            <div class="reply-bar" id="reply-bar-to-${tweet.uuid}">
+                <p>Write you reply</p>
             </div>   
         </div>
         `
