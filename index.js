@@ -47,7 +47,12 @@ function handleRetweetClick(tweetId){
 }
 
 function handleReplyClick(replyId){
+    //function for close the open replies
+    collapseReplies()
+    //and make the target reply visible
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
+    document.getElementById(`reply-input-to-${replyId}`).focus()
+    
 }
 
 function handleTweetBtnClick(){
@@ -69,6 +74,12 @@ function handleTweetBtnClick(){
     tweetInput.value = ''
     }
 
+}
+
+function collapseReplies(){
+    document.querySelectorAll('.replies:not(.hidden)').forEach(element => {
+        element.classList.toggle("hidden")
+    })
 }
 
 function getFeedHtml(){
@@ -136,11 +147,11 @@ function getFeedHtml(){
                     </div>   
                 </div>            
             </div>
-            <div class="hidden" id="replies-${tweet.uuid}">
+            <div class="replies hidden" id="replies-${tweet.uuid}">
                 ${repliesHtml}
                 <div class="tweet-reply reply-bar" id="reply-bar-to-${tweet.uuid}">
                     <img src="images/scrimbalogo.png" class="profile-pic profile-pic-small">
-                    <p>Write your reply</p>
+                    <textarea placeholder="Write your reply" id="reply-input-to-${tweet.uuid}"></textarea>
                 </div>
             </div>   
         </div>
